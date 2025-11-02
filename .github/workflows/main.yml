@@ -79,7 +79,7 @@ jobs:
 
       - name: Attach build artifacts to workflow
         if: always()
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v5
         with:
           name: logs-${{ matrix.php-version }}
           path: |
