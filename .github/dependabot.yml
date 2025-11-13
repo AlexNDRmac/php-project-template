@@ -10,3 +10,13 @@ updates:
     assignees: [AlexNDRmac]
     commit-message:
       prefix: "ci: "
+
+  # Composer dependencies
+  - package-ecosystem: "composer"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    target-branch: master
+    assignees: [AlexNDRmac]
+    commit-message:
+      prefix: "deps: "

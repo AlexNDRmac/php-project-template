@@ -21,4 +21,10 @@ final class Example
     {
         return $this->name;
     }
+
+    public function warningForPhpcs()
+    {
+        $foo  = [1,2,3];
+        echo $foo[0];
+    }
 }
