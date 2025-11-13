@@ -31,7 +31,7 @@ jobs:
       - name: Get Composer Cache Dev
         id: composer-cache-dev
         run: |
-          echo "::set-output name=dir::$(composer config cache-files-dir)"
+          echo "dir=$(composer config cache-files-dir)" >> "$GITHUB_OUTPUT"
 
       - uses: actions/cache@v4
         with:
@@ -63,7 +63,7 @@ jobs:
         run: |
           git fetch origin $GITHUB_BASE_REF
           make infection \
-            ARGS="--skip-initial-tests --git-diff-filter=AM --logger-github"
+            ARGS="--skip-initial-tests --logger-github"
 
       - name: Generate PHP Metrics HTML report for Project
         run: |

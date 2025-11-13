@@ -16,8 +16,8 @@ jobs:
       - name: Parse CHANGELOG for Release Notes
         id: release
         run: |
-          echo ::set-output name=VERSION::${GITHUB_REF#refs/tags/}
-          echo ::set-output name=RELEASE_NOTES::$(.github/release-notes.sh CHANGELOG.md)
+          echo "VERSION=${GITHUB_REF#refs/tags/}" >> "$GITHUB_OUTPUT"
+          echo "RELEASE_NOTES=$(.github/release-notes.sh CHANGELOG.md)" >> "$GITHUB_OUTPUT"
 
       - name: Create Release
         uses: ncipollo/release-action@v1

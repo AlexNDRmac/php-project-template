@@ -1,18 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<phpunit backupGlobals="false"
-         backupStaticAttributes="false"
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/12.0/phpunit.xsd"
          bootstrap="vendor/autoload.php"
          colors="true"
-         convertErrorsToExceptions="true"
-         convertNoticesToExceptions="true"
-         convertWarningsToExceptions="true"
+         backupGlobals="false"
+         backupStaticProperties="false"
          processIsolation="false"
          stopOnFailure="false"
          stopOnError="false"
          stopOnIncomplete="false"
          stopOnSkipped="false"
-         stopOnRisky="false"
->
+         stopOnRisky="false">
 
   <testsuites>
     <testsuite name="Unit">
@@ -31,16 +29,10 @@
   </testsuites>
 
   <!--  Configures the code coverage reports to be generated.-->
-  <coverage cacheDirectory="./storage/logs/coverage-cache"
-            includeUncoveredFiles="true"
-            processUncoveredFiles="true"
+  <coverage includeUncoveredFiles="true"
             pathCoverage="false"
             ignoreDeprecatedCodeUnits="true"
             disableCodeCoverageIgnore="true">
-    <include>
-      <directory suffix=".php">./src</directory>
-    </include>
-
     <report>
       <clover outputFile="./storage/logs/clover.xml"/>
       <!-- Detailed HTML Report with Code Coverage -->
@@ -50,6 +42,12 @@
       <xml outputDirectory="./storage/logs/coverage-xml"/>
     </report>
   </coverage>
+
+  <source>
+    <include>
+      <directory suffix=".php">./src</directory>
+    </include>
+  </source>
 
   <logging>
     <!-- Coverage Info For PHPMetrics and Infection -->

@@ -46,7 +46,7 @@ phpmd: ## Run PHP Mess Detector inspection
 
 .PHONY: tests
 tests: ## Run PHPUnit tests
-	./vendor/bin/phpunit $(ARGS)
+	XDEBUG_MODE=coverage ./vendor/bin/phpunit $(ARGS)
 	cat $(OUTPUT_DIR)/coverage-summary.txt
 
 .PHONY: infection
