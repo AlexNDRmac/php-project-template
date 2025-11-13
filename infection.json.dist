@@ -8,10 +8,7 @@
   "logs": {
     "text": ".\/storage\/logs\/infection-log.txt",
     "summary": ".\/storage\/logs\/infection-summary.log",
-    "perMutator": ".\/storage\/logs\/infection-per-mutator.md",
-    "badge": {
-      "branch": "master"
-    }
+    "perMutator": ".\/storage\/logs\/infection-per-mutator.md"
   },
   "testFramework": "phpunit",
   "bootstrap": "./vendor/autoload.php"
