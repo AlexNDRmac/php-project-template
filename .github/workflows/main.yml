@@ -71,7 +71,7 @@ jobs:
 
       - name: Attach build artifacts to workflow
         if: always()
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v6
         with:
           name: logs
           path: |
