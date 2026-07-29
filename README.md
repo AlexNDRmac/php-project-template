@@ -39,7 +39,7 @@ Available targets:
 
 [actions badge]:    https://github.com/AlexNDRmac/php-project-template/actions/workflows/main.yml/badge.svg
 [actions link]:     https://github.com/AlexNDRmac/php-project-template/actions/workflows/main.yml
-[phpcs link]:       https://github.com/squizlabs/PHP_CodeSniffer
+[phpcs link]:       https://github.com/PHPCSStandards/PHP_CodeSniffer
 [phpmd link]:       https://github.com/phpmd/phpmd
 [phpunit link]:     https://github.com/sebastianbergmann/phpunit
 [infection link]:   https://github.com/infection/infection
